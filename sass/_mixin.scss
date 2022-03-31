@@ -1,0 +1,13 @@
+@mixin flexProp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin commoncode($letterSpace) {
+    color: #222f3e;
+    font-size: 1rem + 1rem;
+    letter-spacing: $letterSpace;
+    text-transform: capitalize
+  }

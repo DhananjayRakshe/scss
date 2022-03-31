@@ -1,0 +1,42 @@
+// 1. Operators
+// 2. Variables
+// 3. Nesting
+// 4. Mixin
+// 5. Parameters
+// 6. Partials
+@import "mixin";
+@import "var";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_header {
+  @include flexProp; 
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-color;
+
+  h1 {
+    @include commoncode(0.8rem);
+    &:hover {
+      color: antiquewhite;
+      cursor: pointer;
+      transition: ease-out 200ms;
+    }
+    &::after {
+      content: " CHANNEL";
+    }
+  }
+
+  p {
+    @include commoncode(0.3rem);
+    &:hover {
+      color: antiquewhite;
+      cursor: pointer;
+      transition: ease-out 200ms;
+    }
+  }
+}
